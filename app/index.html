@@ -9,7 +9,7 @@
 </head>
 <body ng-controller="MyCtrl1">
   <div  g-chart></div>
-  <select id="chartType" ng-change="selectType(chartType)" ng-model="chartType" ng-options="c.typeName for c in chartTypes">
+  <select id="chartType" ng-change="selectedType(chartType)" ng-model="chartType" ng-options="c.typeName for c in chartTypes">
  </select>
  <div>Angular seed app: v<span app-version></span></div>
 <li class="dropdown" >
@@ -17,7 +17,7 @@
     {{chartType.typeName}}
   </a>
   <ul class="dropdown-menu">
-    <li ng-click="selectType(chartType)" ng-model="chartType" ng-repeat="choice in chartTypes">
+    <li ng-click="selectedType(chartType)" ng-model="chartType" ng-repeat="choice in chartTypes">
       <a >{{choice.typeName}}</a>
     </li>
   </ul>
