@@ -1,0 +1,49 @@
+<html ng-app="EwavLite">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--TODO:  read a list of tgadgers from a canhas file-->
+
+<!--first just read hard-coded data from controller-->
+<div class="container">
+    <tabset>
+
+        <tab>
+            <div ng-controller="CanvasController">
+                {{canvas.canvasName}}
+                <li class="dropdown">
+                    <a class="dropdown-toggle">
+                        {{canvas.canvasName}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="gadget in canvas.gadgets">
+                            <a ng-click="clickTest()">{{gadget.gadgetType}}</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </div>
+        </tab>
+
+    </tabset>
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="lib/common/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/common/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/Services/services.js"></script>
+<script src="js/Controllers/demo_controller.js"></script>
+<script src="js/Filters/filters.js"></script>
+<script src="js/Directives/directives.js"></script>
+<script src="js/Controllers/CanvasController.js"></script>
+
+</body>
+</html>
